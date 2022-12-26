@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Liên hệ</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function lienhe() {
+            let messages = [];
+
+            let email = document.getElementById("txtEmail").value;
+            let TD = document.getElementById("txtTD").value;
+            let LN = document.getElementById("txtLN").value;
+
+            let regexEmail = /^\w+@\w+\.com$/;
+
+
+
+            if (email.trim() !== '' && !regexEmail.test(email))
+                messages.push("Email phải đúng định dạng");
+
+
+            if (TD.trim() === '')
+                messages.push("Tiêu đề là bắt buộc nhập");
+
+            if (LN.trim() === '')
+                messages.push("Lời nhắn là bắt buộc nhập");
+
+            if (messages.length > 0) {
+                document.getElementById("error").innerHTML = messages.join("; ");
+                return false;
+            }
+
+            document.getElementById("error").innerHTML = "";
+            alert("Đã gửi lời nhắn thành công!");
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row p-5 <!--bg-secondary-->">
+            <h1 style="text-align:center"><img src="../images/thiênthan.jpg" width="200" height="150" />Thiên Thần Nhỏ</h1>
+        </div>
+
+        <!--Menu-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">Lit-an</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trangchu2.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sanphamchitiet1.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Giohang2.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thành viên</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="Dangky3.html">Đăng ký</a>
+                            <a class="dropdown-item" href="Dangnhap3.html">Đăng nhập</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0"action="Timkiem2.html">
+                    <input class="form-control mr-sm-2" type="text" placeholder="..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                </form>
+               
+            </div>
+        </nav>
+
+
+        <main role="main">
+            <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+            <div class="container mt-2">
+                <h1 class="text-center">Liên hệ với Thiên thần nhỏ</h1>
+                <div class="row">
+                    <div class="col col-md-6">
+                        <img src="../images/3cai.png">
+                    </div>
+
+
+                   
+
+
+                    <div class="col-6">
+                        <form action="">
+                            
+                            <p><span id="error" class="font-italic text-danger"></span></p>
+                           
+                            <input class="form-control mt-2" required="required" type="email" name="txtEmail" id="txtEmail"  placeholder="Email đăng nhập" />
+                            <input class="form-control mt-2" required="required" type="text" id="txtTD" placeholder="Tiêu đề" autocomplete="off" />
+                           
+                            <div> <textarea name="message" class="form-control" placeholder="Nhập lời nhắn" id="txtLN"></textarea></div>
+
+                            <button type="button" class="btn btn-success mt-2" onclick="return lienhe();"><a href="Trangchu2.html">Gửi lời nhắn</a></button>
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="row mt-2">
+                    <div class="col col-md-12">
+                        <iframe src="https://map.coccoc.com/map/4019890073233759?title=Tr%C6%B0%E1%BB%9Dng+%C4%91%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+Nghi%E1%BB%87p+TP+H%E1%BB%93+Ch%C3%AD+Minh&reqid=a99z8lnY"
+                                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- End block content -->
+        </main>
+
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <span>Bản quyền © bởi <a href="Trangchu2.html">Thiên thần nhỏ</a> -
+                <script>document.write(new Date().getFullYear());</script>.</span>
+                <span class="text-muted">Hành trang tới Tương lai</span>
+
+                <p class="float-right">
+                    <a href="#">Về đầu trang</a>
+                </p>
+            </div>
+        </footer>
+
+
+
+        </div>
+</body>
+</html>

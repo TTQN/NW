@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Thanh toán</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function dathang() {
+            let messages = [];
+
+            let Ten = document.getElementById("txtTen").value;
+            let DT = document.getElementById("txtDT").value;
+            let Email = document.getElementById("txtEmail").value;
+            let DC = document.getElementById("txtDC").value;
+
+
+            let regexEmail = /^\w+@\w+\.com$/;
+            let regexDT = /^[0-9]{9,10}$/;
+
+            if (Ten.trim() === '')
+                messages.push("Họ và tên là bắt buộc nhập");
+
+            if (DC.trim() === '')
+                messages.push("Họ và tên là bắt buộc nhập");
+
+            if (Email.trim() !== '' && !regexEmail.test(Email))
+                messages.push("Email phải đúng định dạng");
+
+
+            if (DT.trim() !== '' && !regexDT.test(DT))
+                messages.push("Số DT từ 9 đến 10 số");
+
+            if (messages.length > 0) {
+                document.getElementById("error").innerHTML = messages.join("; ");
+                return false;
+            }
+
+            document.getElementById("error").innerHTML = "";
+            alert("Đặt hàng thành công!");
+            return true;
+
+       }
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row p-5 <!--bg-secondary-->">
+            <h1 style="text-align:center"><img src="../images/thiênthan.jpg" width="200" height="150" />Thiên Thần Nhỏ</h1>
+        </div>
+
+        <!--Menu-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">Lit-an</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trangchu2.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sanphamchitiet1.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Giohang2.html">Giỏ hàng</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thành viên</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="Dangky3.html">Đăng ký</a>
+                            <a class="dropdown-item" href="Dangnhap3.html">Đăng nhập</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="Timkiem2.html">
+                    <input class="form-control mr-sm-2" type="text" placeholder="..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                </form>
+
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row" style="background-color: rgba(0, 0, 0, 0.00);">
+
+                <div class="col-6">
+                    <form action="">
+                        <h1 class="mt-5">Thanh toán</h1>
+                        <p>Nhanh - Đúng hạn - Chất lượng</p>
+                        <p><span id="error" class="font-italic text-danger"></span></p>
+                        <input class="form-control mt-2" required="required" type="text" id="txtTen" placeholder="Họ và tên" />
+                        <input class="form-control mt-2" required="required" type="email" name="txtEmail" id="txtEmail" placeholder="Email đăng nhập" />
+                        <input class="form-control mt-2" required="required" type="text" id="txtDC" autocomplete="off" placeholder="Nhập địa chỉ" />
+                        <input class="form-control mt-2" required="required" type="tel" id="txtDT" autocomplete="off" placeholder="Nhập số điện thoại" />
+
+                        <button type="button" class="btn btn-success mt-2" onclick="return dathang();"><a href="Trangchu2.html">Đặt hàng</a></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <span>
+                    Bản quyền © bởi <a href="Trangchu2.html">Nền Tảng</a> -
+                    <script>document.write(new Date().getFullYear());</script>.
+                </span>
+                <span class="text-muted">Hành trang tới Tương lai</span>
+
+                <p class="float-right">
+                    <a href="#">Về đầu trang</a>
+                </p>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+
+        </div>
+</body>
+</html>

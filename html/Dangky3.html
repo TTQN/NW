@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Đăng ký 3</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function dangky(){
+
+            let messages = [];
+
+            let TenDK = document.getElementById("txtTenDK").value;
+            let email = document.getElementById("txtEmail").value;
+            let password = document.getElementById("txtPassword").value;
+            let DT= document.getElementById("txtDT").value;
+
+            let regexEmail = /^\w+@\w+\.com$/; 
+            let regexPassword = /^[A-Za-z0-9]{8}$/;
+            let regexDT = /^[0-9]{9,10}$/;
+
+            if(TenDK.trim()==='')
+                messages.push("Tên đăng ký là bắt buộc nhập");
+
+            if(email.trim()!=='' && !regexEmail.test(email))
+                messages.push("Email phải đúng định dạng");
+
+            if(password.trim()!=='' && !regexPassword.test(password))
+                messages.push("Mật khẩu phải 8 ký tự");
+
+            if (DT.trim() !== '' && !regexDT.test(DT))
+                messages.push("Số DT từ 9 đến 10 số");
+
+            if(messages.length > 0){
+                document.getElementById("error").innerHTML = messages.join("; ");
+                return false;
+            }
+
+            document.getElementById("error").innerHTML = "";
+            alert("Đăng ký thành công!");
+            return true;
+        }
+
+        
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row text-white p-2" style="background-color:#2eaa99;">
+            <div class="col-6 align-self-end">
+                <h1>Thiên thần nhỏ</h1>
+            </div>     
+        </div>
+
+        <div class="row" style="background-color: rgba(0, 0, 0, 0.00);">
+            <div class="col-5 pl-5">
+                <img class="mt-5" src="../images/thiênthan.jpg" alt="thienthan" width="300">
+                <h1 class="text-primary">Cảm ơn bạn <br/> đã ghé thăm !</h1>
+                <br/>
+                <br/>
+               
+            </div>
+                <div class="col-6">
+                        <form action="">
+                            <h1 class="mt-5">Đăng ký</h1>
+                            <p class="mt-5 mb-5">Miễn phí và sẽ luôn như vậy.</p>
+                            <p><span id="error" class="font-italic text-danger"></span></p>
+                            <input class="form-control mt-2" required="required" type="text"  id="txtTenDK"  placeholder="Tên đăng ký" />
+                            <input class="form-control mt-2" required="required" type="email" name="txtEmail" id="txtEmail"  placeholder="Email đăng nhập" />
+                            <input class="form-control mt-2" required="required" type="password"  id="txtPassword"  placeholder="Mật khẩu" autocomplete="off"/>
+                            <input class="form-control mt-2" required="required" type="password" id="txtPassword" autocomplete="off"  placeholder="Nhập lại mật khẩu" />
+                            <input class="form-control mt-2" required="required" type="tel" id="txtDT" autocomplete="off" placeholder="Nhập số điện thoại"  />
+
+                            <button type="button" class="btn btn-success mt-2" onclick="return dangky();"><a href="Trangchu2.html">Đăng ký</a></button>
+                        </form>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

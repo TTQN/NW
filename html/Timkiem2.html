@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Tìm kiếm 2</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row p-5 <!--bg-secondary-->">
+            <h1 style="text-align:center"> <img src="../images/thiênthan.jpg" width="200" height="150" />Thiên Thần Nhỏ</h1>
+        </div>
+
+        <!--Menu-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">Lit-an</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Trangchu2.html">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gioithieu.html">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sitemap.html">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Lienhe.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sanphamchitiet1.html">Sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Giohang2.html">Giỏ hàng</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Thành viên</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="Dangky3.html">Đăng ký</a>
+                            <a class="dropdown-item" href="Dangnhap3.html">Đăng nhập</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="Timkiem2.html">
+                    <input class="form-control mr-sm-2" type="text" placeholder="..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+                </form>
+
+            </div>
+        </nav>
+
+
+        <main role="main">
+            <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+            <!-- Danh sách sản phẩm -->
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Tìm kiếm sản phẩm</h1>
+                    <p class="lead text-muted">
+                        Các sản phẩm với chất lượng, uy tín, cam kết từ nhà Sản xuất, phân phối và bảo hành chính hãng.
+                    </p>
+                    <div class="text-center">
+
+                        <article class="card-group-item">
+                            <header class="card-header">
+                                <h6 class="title">Tên sản phẩm </h6>
+                            </header>
+                            <div class="filter-content">
+                                <div class="card-body">
+                                    <input class="form-control" type="text" placeholder="Tìm kiếm" id="txtTK" value="">
+                                </div> <!-- card-body.// -->
+                            </div>
+                        </article> <!-- // Tìm kiếm theo Tên sản phẩm -->
+
+                        <input type="reset" id="btnReset" class="btn btn-warning"  value="Xóa "/>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Giải thuật duyệt và render Danh sách sản phẩm theo dòng, cột của Bootstrap -->
+            <div class="danhsachsanpham py-5 bg-light">
+                <div class="container">
+                    <div class="row" >
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"  src="../images/boaothundai.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5> Bộ đồ áo thun dài tay bé gái</h5>
+
+
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s></s>
+                                            <b>200,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"    src="../images/chuotmic.png" >
+                                </a>
+                                <div class="card-body">
+                                   <h5>Bộ Quần áo trẻ em bộ đồ bé gái hình chuột cài nơ</h5>
+                                      <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s>100,000</s>
+                                            <b>80,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                         src="../images/aochuT.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5>Áo thun bé gái bé- trai tay ngắn</h5>
+
+
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s></s>
+                                            <b>190,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                         src="../images/Đồ bé trai theo phong cách hàn quốc.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5>Đồ bé trai phong cách hàn quốc</h5>
+
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s></s>
+                                            <b>180,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                         src="../images/dobetraigaimonky.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5>Đồ Bộ Bé Trai, Bé Gái Minky Mom Vải Thun Lạnh</h5>
+
+
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s>100,000</s>
+                                            <b>50,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                         src="../images/hoathinh.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5>Bộ quần áo trẻ em hoạt hình QATE656 cho bé trai và bé gái</h5>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s></s>
+                                            <b>100,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4" id="txtTim">
+                            <div class="card mb-4 shadow-sm" >
+                                <a href="Sanphamchitiet1.html  ">
+                                    <img class="bd-placeholder-img card-img-top" width="100%" height="350"
+                                         src="../images/chuotmic.png">
+                                </a>
+                                <div class="card-body">
+
+                                    <h5>Bộ Quần áo trẻ em bộ đồ bé gái hình chuột cài nơ</h5>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-outline-secondary" href="#">
+                                                Xem chi tiết
+                                            </a>
+                                        </div>
+                                        <small class="text-muted text-right">
+                                            <s>100,000</s>
+                                            <b>80,000 vnđ</b>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- End block content -->
+        </main>
+
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <span>
+                    Bản quyền © bởi <a href="Trangchu2.html">Thiên thần nhỏ</a> -
+                    <script>document.write(new Date().getFullYear());</script>.
+                </span>
+                <span class="text-muted">Hành trang tới Tương lai</span>
+
+                <p class="float-right">
+                    <a href="#">Về đầu trang</a>
+                </p>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+
+        <script>
+$(document).ready(function(){
+  $("#txtTK").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#txtTim div ").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+        </script>
+
+       
+
+    </div>
+
+
+
+    
+
+
+</body>
+</html>
